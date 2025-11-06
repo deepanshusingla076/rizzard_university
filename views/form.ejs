@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Registration - Rizzard University</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs', {currentPage: 'form'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb">Event Registration</h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;Register</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="event-form-section py-5">
+        <div class="container-xl">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <div class="form-container">
+                        <% if(typeof success !== 'undefined' && success) { %>
+                            <div class="alert alert-success" role="alert">
+                                <i class="fas fa-check-circle me-2"></i> Your registration has been submitted successfully! We'll contact you with further details.
+                            </div>
+                        <% } %>
+                        
+                        <div class="form-header">
+                            <h2>Event Registration Form</h2>
+                            <p>Please fill out the form below to register for an event. All fields marked with * are required.</p>
+                        </div>
+
+                        <form id="event-registration-form" action="/api/submit-event-registration" method="POST" class="row g-3">
+
+                            <div class="form-section">
+                                <h3 class="section-title"><i class="fas fa-user me-2"></i>Personal Information</h3>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="dob" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" name="dob">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Gender</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                                        <label class="form-check-label" for="other">Other</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3 class="section-title"><i class="fas fa-calendar-alt me-2"></i>Event Details</h3>
+                                
+                                <div class="mb-3">
+                                    <label for="event" class="form-label">Event Name *</label>
+                                    <select class="form-select" id="event" name="event" required>
+                                        <option value="" disabled selected>Select an event</option>
+                                        <option value="Tech Conference 2025">Tech Conference 2025</option>
+                                        <option value="Career Fair">Career Fair</option>
+                                        <option value="Alumni Reunion">Alumni Reunion</option>
+                                        <option value="Annual Graduation Ceremony 2025">Annual Graduation Ceremony 2025</option>
+                                        <option value="Other">Other (Please specify)</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3" id="otherEventDiv" style="display: none;">
+                                    <label for="otherEvent" class="form-label">Other Event</label>
+                                    <input type="text" class="form-control" id="otherEvent" name="otherEvent" placeholder="Please specify the event name">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="college" class="form-label">College/Organization *</label>
+                                    <input type="text" class="form-control" id="college" name="college" placeholder="Enter your college or organization name" required>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="role" class="form-label">Your Role</label>
+                                        <select class="form-select" id="role" name="role">
+                                            <option value="" selected>Select your role</option>
+                                            <option value="Student">Student</option>
+                                            <option value="Faculty">Faculty</option>
+                                            <option value="Alumni">Alumni</option>
+                                            <option value="Industry Professional">Industry Professional</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guests" class="form-label">Number of Guests (if applicable)</label>
+                                        <input type="number" class="form-control" id="guests" name="guests" min="0" value="0">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3 class="section-title"><i class="fas fa-info-circle me-2"></i>Additional Information</h3>
+                                
+                                <div class="mb-3">
+                                    <label for="requirements" class="form-label">Special Requirements</label>
+                                    <textarea class="form-control" id="requirements" name="requirements" rows="3" placeholder="Please let us know if you have any special requirements or accommodations"></textarea>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="referral" class="form-label">How did you hear about this event?</label>
+                                    <select class="form-select" id="referral" name="referral">
+                                        <option value="" selected>Select an option</option>
+                                        <option value="Website">University Website</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Friend">Friend or Colleague</option>
+                                        <option value="Flyer">Poster/Flyer</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter to stay updated with future events
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">terms and conditions</a> *
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">Reset Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="side-section event-info">
+                        <h3>Event Information</h3>
+                        <p>Join us for our upcoming events at Rizzard University. Connect with professionals, expand your network, and enhance your knowledge.</p>
+                        <ul class="event-features">
+                            <li><i class="fas fa-check-circle"></i> Network with industry professionals</li>
+                            <li><i class="fas fa-check-circle"></i> Learn from expert speakers</li>
+                            <li><i class="fas fa-check-circle"></i> Participate in interactive sessions</li>
+                            <li><i class="fas fa-check-circle"></i> Receive certificates of participation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="side-section contact-info">
+                        <h3>Contact Information</h3>
+                        <p>If you have any questions about the event or registration process, please contact us:</p>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-phone"></i> +123-456-7890</li>
+                            <li><i class="fas fa-envelope"></i> events@rizzard.edu</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Rizzard University, University Plaza</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="side-section">
+                        <div class="upcoming-events">
+                            <h3>Other Upcoming Events</h3>
+                            <div class="upcoming-event-item">
+                                <div class="event-date-mini">
+                                    <span class="month">Jun</span>
+                                    <span class="day">15</span>
+                                </div>
+                                <div class="event-mini-details">
+                                    <h4>Summer Research Symposium</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Research Center</p>
+                                </div>
+                            </div>
+                            <div class="upcoming-event-item">
+                                <div class="event-date-mini">
+                                    <span class="month">Jul</span>
+                                    <span class="day">10</span>
+                                </div>
+                                <div class="event-mini-details">
+                                    <h4>International Student Orientation</h4>
+                                    <p><i class="fas fa-map-marker-alt"></i> Student Center</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Event Registration Terms</h5>
+                    <p>By registering for events at Rizzard University, you agree to the following terms and conditions:</p>
+                    <ol>
+                        <li>Registration is only confirmed upon receiving a confirmation email from us.</li>
+                        <li>Personal information provided during registration will be used solely for event-related communications and will be handled according to our privacy policy.</li>
+                        <li>Photography and recording may occur during events. By attending, you consent to be photographed or recorded, and for Rizzard University to use these materials for promotional purposes.</li>
+                        <li>Cancellations must be made at least 48 hours before the event. No-shows may affect future registration privileges.</li>
+                        <li>Rizzard University reserves the right to modify or cancel events due to unforeseen circumstances.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventSelect = document.getElementById('event');
+            const otherEventDiv = document.getElementById('otherEventDiv');
+            const otherEventInput = document.getElementById('otherEvent');
+            
+            eventSelect.addEventListener('change', function() {
+                if (this.value === 'Other') {
+                    otherEventDiv.style.display = 'block';
+                    otherEventInput.required = true;
+                } else {
+                    otherEventDiv.style.display = 'none';
+                    otherEventInput.required = false;
+                }
+            });
+
+            const form = document.getElementById('event-registration-form');
+            form.addEventListener('submit', function(e) {
+                if (!form.checkValidity()) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
+</body>
+</html>

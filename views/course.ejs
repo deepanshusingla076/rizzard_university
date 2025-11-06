@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Courses - Rizzards</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/course.css">
+</head>
+<body>
+    <%#- include('./partials/loader.ejs') %>
+
+    <%- include('./partials/header.ejs', {currentPage: 'course'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb">University Courses</h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;Courses</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Center-content">
+        <div class="center-main">
+            <div class="main">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Science and Engineering</h5>
+                        <p class="card-text">The Computer Science Engineering course focuses on computer hardware,
+                            software, algorithms, and systems.</p>
+                        <a href="/course-details/cse" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Business and Management</h5>
+                        <p class="card-text">This course provides a deep understanding of strategic management,
+                            leadership, and decision-making in the corporate world.</p>
+                        <a href="/course-details/business" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mechanical Engineering</h5>
+                        <p class="card-text">Mechanical engineering focuses on the design, analysis, and manufacturing
+                            of mechanical systems and machines.</p>
+                        <a href="/course-details/mechanical" class="btn btn-primary">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Medicine and Healthcare</h5>
+                        <p class="card-text">This course delves into medical knowledge and healthcare practices,
+                            focusing on diagnosing and treating illnesses.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Design and Creative Arts</h5>
+                        <p class="card-text">A dynamic course offering creative skill development in graphic design,
+                            visual arts, and fashion design.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Law and Legal Studies</h5>
+                        <p class="card-text">This program covers the study of legal systems, laws, and regulations,
+                            preparing students for careers in law.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Science and Research</h5>
+                        <p class="card-text">Explore research methodologies and experimental practices in scientific
+                            discovery and innovation.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Finance and Accounting</h5>
+                        <p class="card-text">Learn the essentials of financial management, accounting principles, and
+                            corporate finance.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Hospitality and Tourism</h5>
+                        <p class="card-text">This course focuses on managing hospitality services, tourism operations,
+                            and customer service in the hospitality industry.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Course details coming soon!'); return false;">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

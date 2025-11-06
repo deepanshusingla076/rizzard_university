@@ -1,0 +1,210 @@
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.card {
+    border-radius: 11px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 1.5rem 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card h5 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card h6 {
+    font-size: 17.6px;
+    font-weight: 600;
+    color: #555;
+}
+
+.card p {
+    font-size: 17px;
+    color: #777;
+    margin: 0 10px 25px;
+}
+
+.card img {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    width: 100px;
+}
+
+.fa-star,
+.fa-star-half-alt,
+.fa-star-half {
+    color: #f1d60c;
+    margin-right: 5px;
+}
+
+.container1 {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+h2 {
+    color: #112f5c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.star-rating {
+    display: inline-flex;
+    justify-content: center;
+    direction: rtl;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.star-rating input[type="radio"]:checked~label,
+.star-rating label:hover,
+.star-rating label:hover~label {
+    color: #f5c518;
+}
+
+button[type="submit"] {
+    background: #f1d60c;
+    color: #112f5c !important;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: #112f5c;
+    color: #f1d60c !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-input:checked,
+.form-check-label::before {
+    background-color: #007bff;
+}
+
+.form-check-input:focus,
+.form-check-label::before {
+    border-color: #007bff;
+}
+
+/* Responsive*/
+@media (max-width: 991.98px) {
+    .container1 {
+        max-width: 90%;
+        padding: 30px;
+    }
+    
+    .card img {
+        width: 80px;
+    }
+    
+    .card h5 {
+        font-size: 20px;
+    }
+    
+    .card p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container1 {
+        padding: 25px;
+        margin: 30px auto;
+    }
+    
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    .card p {
+        margin-bottom: 15px;
+    }
+    
+    .star-rating label {
+        font-size: 1.5rem;
+    }
+    
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        padding: 8px;
+    }
+    
+    .star-rating label {
+        font-size: 1.3rem;
+        margin-right: 2px;
+    }
+}

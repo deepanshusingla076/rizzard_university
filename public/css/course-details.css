@@ -1,0 +1,191 @@
+.course-details-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.section-title {
+    color: #112f5c;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background-color: #f1d60c;
+}
+
+.course-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* Course Features */
+.features-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.features-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.benefit-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: #f1d60c;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #f1d60c;
+}
+
+.benefit-icon {
+    font-size: 24px;
+    color: #f1d60c;
+    margin-bottom: 15px;
+}
+
+.benefit-card h5 {
+    font-weight: 600;
+    color: #112f5c;
+    margin-bottom: 10px;
+}
+
+/* Learning Outcomes */
+.outcome-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.outcome-number {
+    background-color: #112f5c;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.outcome-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.course-sidebar .card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.course-sidebar .card-header {
+    background-color: #112f5c;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.course-sidebar .list-group-item {
+    padding: 15px 20px;
+    border-color: #eee;
+}
+
+/* Requirements List */
+.requirements-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.requirements-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.6;
+}
+
+.requirements-list li i {
+    font-size: 10px;
+    color: #112f5c;
+    margin-top: 8px;
+}
+
+/* Application Form */
+.form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #f1d60c;
+    box-shadow: 0 0 0 0.2rem rgba(241, 214, 12, 0.25);
+}
+
+.btn-primary {
+    background-color: #112f5c;
+    border-color: #112f5c;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #0c2245;
+    border-color: #0c2245;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.alert-success .fas {
+    color: #28a745;
+}

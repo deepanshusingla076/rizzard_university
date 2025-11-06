@@ -1,0 +1,49 @@
+<section id="header">
+    <nav class="navbar navbar-expand-md navbar-light navbar-custom" id="navbar_sticky">
+        <div class="container-xl">
+            <a class="navbar-brand p-0 fw-bold text-uppercase" href="/dashboard">
+                <i class="fas fa-graduation-cap symbol"></i> RIZ<span class="symbol">ZARDS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" aria-current="page" href="/dashboard">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= currentPage === 'about' ? 'active' : '' %>" href="/about">About</a>
+                    </li>
+                    <% if (typeof isLoggedIn !== 'undefined' && isLoggedIn) { %>
+                        <li class="nav-item">
+                            <a class="nav-link <%= currentPage === 'course' ? 'active' : '' %>" aria-current="page" href="/course">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= currentPage === 'blog' ? 'active' : '' %>" aria-current="page" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= currentPage === 'event' ? 'active' : '' %>" aria-current="page" href="/event">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <%= currentPage === 'review' ? 'active' : '' %>" aria-current="page" href="/review">Review</a>
+                        </li>
+                    <% } %>
+                    <li class="nav-item">
+                        <a class="nav-link <%= currentPage === 'contact' ? 'active' : '' %>" aria-current="page" href="/contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= currentPage === 'faq' ? 'active' : '' %>" aria-current="page" href="/faq">Faq</a>
+                    </li>
+                    <% if (typeof isLoggedIn !== 'undefined' && isLoggedIn) { %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/api/logout">Logout</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>

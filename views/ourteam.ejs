@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Our Team - Rizzards</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/ourteam.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs', {currentPage: 'ourteam'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb">Our Team</h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;Our Team</h6>
+                </div>
+            </div>
+        </div>
+    </section>    <div class="py-5 team4">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center mb-4">
+                <div class="col-md-7 col-sm-10 col-12 text-center">
+                    <h3 class="mb-3">Project Team</h3>
+                    <h6 class="subtitle">This website is a result of the hard work and creativity of a group of
+                        dedicated students. While we strive to deliver quality and innovation with every step of our
+                        journey.</h6>
+                </div>
+            </div>            <div class="row justify-content-center g-4">
+                <div class="col-lg-3 mb-4">
+                    <div class="text-center">
+                        <div class="team-img-container">
+                            <img src="/images/deepanshu.jpg" alt="Deepanshu Singla"
+                                class="team-img" />
+                        </div>                        <div class="pt-2">
+                            <h5 class="mt-4 mb-0 fw-medium">Deepanshu Singla</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <div class="text-center">
+                        <div class="team-img-container">
+                            <img src="/images/gurleen.jpg" alt="Gurleen Kaur Dhillon"
+                                class="team-img" />
+                        </div>                        <div class="pt-2">
+                            <h5 class="mt-4 mb-0 fw-medium">Gurleen Kaur Dhillon</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <div class="text-center">
+                        <div class="team-img-container">
+                            <img src="/images/ayush.jpg" alt="Ayush Chauhan"
+                                class="team-img" />
+                        </div>
+                        <div class="pt-2">
+                            <h5 class="mt-4 mb-0 fw-medium">Ayush Chauhan</h5>
+        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <div class="text-center">
+                        <div class="team-img-container">
+                            <img src="/images/gurshriti.jpg" alt="Gursrishti Sahni"
+                                class="team-img" />
+                        </div>                        <div class="pt-2">
+                            <h5 class="mt-4 mb-0 fw-medium">Gursrishti Sahni</h5>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

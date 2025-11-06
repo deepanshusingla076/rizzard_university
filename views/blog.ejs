@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog - Rizzards</title>
+  <%- include('./partials/head.ejs') %>
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <%#- include('./partials/loader.ejs') %>
+  <%- include('./partials/header.ejs', {currentPage: 'blog'}) %>
+  
+  <br><br><br>
+
+  <section id="center" class="box">
+    <div class="container-xl">
+      <div class="boxa">
+        <div class="col-md-12">
+          <h1 class="boxb">Blog</h1>
+          <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;Blog</h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="row">
+    <div class="left-column">
+      <div class="card">
+        <h2>COURSE NAVIGATOR</h2>
+        <h5>Guiding students to discover courses that align with their passions and academic goals.</h5>
+        <h6>August 26, 2022</h6>
+        <img src="/images/blog/image1.jpg" alt="Course Navigator">
+        <p>Course Navigator is your trusted guide for finding courses that match your interests and aspirations.
+          Whether you're searching for the perfect major, exploring elective options, or seeking advice on how to tailor
+          your academic journey to your future career, this blog is here to help you make informed decisions. From
+          course recommendations and expert tips to personal experiences and university insights, The Collegiate Compass
+          provides the resources you need to navigate your academic path with confidence and enthusiasm.</p>
+        <a href="#" class="btn btn-primary" style="width: 100px;">Read More</a>
+        <div class="college-compass">
+          <div class="post-meta">
+            <div class="meta-item">
+              <i class="fa fa-calendar"></i>
+              <span>26th August 2024</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-comments"></i> <a href="/comment" class="text-decoration-none">10 Comments</a>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-thumbs-up"></i>
+              <span>50 Likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>SMART STUDENT SUCCESS</h2>
+        <h5>Guiding students through their university journey with effective strategies for academic success, personal development, and campus life.</h5>
+        <h6>December 10, 2023</h6>
+        <img src="/images/bg2.jpg" alt="Smart Student Budgeting">
+        <p>Our blog is your essential guide to navigating university life. Whether you're preparing for your first semester, managing academic responsibilities, or looking for tips on how to make the most of your college experience, we provide valuable insights into university resources, campus life, and academic strategies. Explore expert advice, tips for personal development, and practical tools to help you succeed both in and out of the classroom, ensuring a rewarding and fulfilling university journey.</p>
+        <a href="#" class="btn btn-primary" style="width: 100px;">Read More</a>
+        <div class="college-compass">
+          <div class="post-meta">
+            <div class="meta-item">
+              <i class="fa fa-calendar"></i>
+              <span>10th December 2023</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-comments"></i> <a href="/comment" class="text-decoration-none">28 Comments</a>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-thumbs-up"></i>
+              <span>100 Likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>EMPOWER YOUR FUTURE</h2>
+        <h5>Breaking Barriers, Building Careers for Disabled Students</h5>
+        <h6>15th April 2023</h6>
+        <img src="/images/blog/image7.webp" alt="Empower your Future">
+        <p>Your academic and career goals are within reach, no matter the challenges you face. Our university is dedicated to supporting students in their pursuit of passion-driven careers. With accessible learning tools, tailored resources, and personalized academic guidance, we ensure that every student has the opportunity to excel in their studies and achieve their dreams. Let us help you navigate your path to success, providing the support and opportunities you deserve throughout your university journey.</p>
+        <a href="#" class="btn btn-primary" style="width: 100px;">Read More</a>
+        <div class="college-compass">
+          <div class="post-meta">
+            <div class="meta-item">
+              <i class="fa fa-calendar"></i>
+              <span>15th April 2023</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-comments"></i>
+              <span>40 Comments</span>
+            </div>
+            <div class="meta-item">
+              <i class="fa fa-thumbs-up"></i>
+              <span>350 Likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="cards">
+        <h2>About Us</h2>
+        <img src="/images/blog/image11.jpg" alt="About Us">
+        <p>Welcome to our education blog, where we explore the latest trends, insights, and strategies in learning and
+          teaching. Whether you're a student looking for study tips, a teacher seeking innovative classroom ideas, or a
+          lifelong learner eager to expand your knowledge, our blog offers valuable resources to enhance your
+          educational journey. Join us as we dive into topics that empower learners of all ages and stages, making education a
+          rewarding and enriching experience.</p>
+      </div>
+
+      <div class="cards">
+        <h3>Popular Post</h3>
+        <img src="/images/2.avif" alt="Popular Post 1">
+        <img src="/images/blog/image5.jpg" alt="Popular Post 2">
+        <img src="/images/blog/image6.jpg" alt="Popular Post 3">
+      </div>
+
+      <div class="card">
+        <h3>Follow Us</h3>
+        <p>Stay connected with us to keep up with the latest in education! Follow us on our social media channels for
+          real-time updates, insightful articles, and tips that can enhance your learning experience. Whether you're a
+          student, educator, or lifelong learner, our posts are designed to inspire and inform. Join our online
+          community and be the first to know about new courses.
+          Let's learn and grow together—follow us today!</p>
+      </div>
+    </div>
+  </div>
+
+  <%- include('./partials/chatbot.ejs') %>
+  <%- include('./partials/footer.ejs') %>
+  
+  <script src="/script/blog.js"></script>
+</body>
+</html>

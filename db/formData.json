@@ -1,0 +1,46 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "personal": {
+      "dob": "1995-06-15",
+      "gender": "Male"
+    },
+    "eventDetails": {
+      "eventName": "Tech Conference 2025",
+      "college": "Chitkara University",
+      "role": "Student",
+      "guests": 1
+    },
+    "additionalInfo": {
+      "requirements": "Vegetarian food option",
+      "referral": "Website",
+      "subscribedToNewsletter": true
+    },
+    "status": "Registered",
+    "registrationDate": "2025-04-15T08:30:00.000Z"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "987-654-3210",
+    "personal": {
+      "dob": "1992-03-22",
+      "gender": "Female"
+    },
+    "eventDetails": {
+      "eventName": "Career Fair",
+      "college": "Chitkara University",
+      "role": "Alumni",
+      "guests": 0
+    },
+    "additionalInfo": {
+      "requirements": "Need accommodation information",
+      "referral": "Email",
+      "subscribedToNewsletter": true
+    },
+    "status": "Registered",
+    "registrationDate": "2025-03-28T14:15:00.000Z"
+  }
+]

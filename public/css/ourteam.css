@@ -1,0 +1,159 @@
+.team4 {
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.team4 h1,
+.team4 h2,
+.team4 h3,
+.team4 h4,
+.team4 h5,
+.team4 h6 {
+    color: #3e4555;
+}
+
+.team4 h5 {
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.team4 .subtitle {
+    color: #8d97ad;
+    line-height: 24px;
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+
+.team4 ul li a {
+    color: #8d97ad;
+    display: block;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    -webkit-transition: 0.1s ease-in;
+    -o-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
+    text-decoration: none;
+}
+
+.team4 ul li a:hover {
+    -webkit-transform: translate3d(0px, -5px, 0px);
+    transform: translate3d(0px, -5px, 0px);
+    color: #316ce8;
+}
+
+.team4 .img-fluid {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team4 .img-fluid:hover {
+    transform: scale(1);
+}
+
+.team4 h3,
+.team4 h6.subtitle {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.team4 h3 {
+    animation: slideIn 1s forwards;
+}
+
+.team4 h6.subtitle {
+    animation: slideIn 1.2s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.team-img-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.team-img-container:hover .team-img {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+    .team-img-container {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .team-img-container {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .team-img-container {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-img-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .team4 h5.mt-4 {
+        margin-top: 0.5rem !important;
+        font-size: 16px;
+    }
+    
+    .team4 .subtitle {
+        font-size: 12px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icons li {
+    margin: 0 8px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #316ce8;
+}

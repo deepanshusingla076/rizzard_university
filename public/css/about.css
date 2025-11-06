@@ -1,0 +1,146 @@
+#feature {
+    padding: 60px 0;
+}
+
+.feature_1l {
+    padding-left: 60px;
+}
+
+.feature_1l h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fffad1;
+    margin-bottom: 15px;
+    margin-left: 12px;
+}
+
+.feature_1l p {
+    margin-left: 10px;
+}
+
+.area {
+    background-color: #68360d;
+}
+
+.para1,
+.ab {
+    color: #fffad1;
+}
+
+.feature_1r img {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.feature_1lil .icon-style {
+    border-radius: 100%;
+    text-align: center;
+    background-color: #854d1a;
+    color: white;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -55px;
+}
+
+.custom-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.ko {
+    color: #112f5c;
+}
+
+.ko:hover {
+    color: #396cba;
+}
+
+.button22 {
+    background: #f1d60c;
+    color: #112f5c !important;
+    display: inline-block;
+    transition: 0.3s;
+    padding: 1.1rem 2rem;
+    border-radius: 3px;
+}
+
+.button22:hover {
+    background: #112f5c;
+    color: #f1d60c !important;
+}
+
+.overview-right img {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 767px) {
+
+    .custom-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .feature_1r img {
+        padding: 10px;
+    }
+
+    .feature_1l h1 {
+        font-size: 2rem;
+    }
+
+    .p_3 {
+        padding: 20px;
+    }
+}
+
+/* For medium screens (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+    .overview-right img {
+        padding: 20px;
+    }
+
+    .feature_1l h1 {
+        font-size: 2.5rem;
+    }
+
+    .custom-img {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .custom-img {
+        height: 175px;
+    }
+
+    .feature_1r img {
+        padding: 30px;
+    }
+
+    .feature_1l h1 {
+        font-size: 3rem;
+    }
+
+    .feature_1li .icon-style {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 2rem;
+    }
+}

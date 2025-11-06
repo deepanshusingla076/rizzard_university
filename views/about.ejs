@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - Rizzards</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+<body>
+    <%#- include('./partials/loader.ejs') %>
+    <%- include('./partials/header.ejs', {currentPage: 'about'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb">About Us</h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;About Us</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="p_3 bg_light">
+        <div class="container-xl">
+            <div class="row overview_1">
+                <div class="col-md-6">
+                    <h2>Website Overview</h2>
+                    <p class="mt-3">Rizzards University is a renowned institution committed to providing a world-class
+                        education that fosters academic excellence, personal growth, and professional development. Our
+                        university offers a diverse range of programs across various disciplines, empowering students to
+                        thrive in their chosen fields. With a focus on research, innovation, and community engagement,
+                        Rizzards University strives to create an environment that encourages intellectual curiosity and
+                        prepares students for success in a globalized world. Our mission is to nurture the leaders of
+                        tomorrow through exceptional education and transformative experiences.</p>
+
+                    <h6 class="mb-0"><a href="/ourteam" class="button22">About Our Team <i
+                                class="fa fa-long-arrow-right ms-1"></i></a></h6>
+                </div>
+                <div class="col-md-6">
+                    <div class="overview-right">
+                        <div class="grid clearfix">
+                            <figure class=" effects">
+                                <a href="#"><img src="/images/2.avif" alt="img3"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" class="area">
+        <div class="container-fluid">
+            <div class="row feature_1">
+                <!-- Left Part: Text Content -->
+                <div class="col-md-6 feature_1l d-flex flex-column justify-content-center">
+                    <h1>Our Best Features</h1>
+                    <p class="para1 mb-0 mb-4">Explore the top-notch features of Rizzards University, designed to
+                        enhance your academic journey, foster research opportunities, and provide expert guidance for
+                        your professional growth.</p>
+
+                    <!-- Feature 1 -->
+                    <div class="feature_1li d-flex align-items-center mb-3">
+                        <div class="feature_1lil">
+                            <div class="icon-style">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                        </div>
+                        <div class="feature_1lir ms-3">
+                            <h3 class="ab">Academic Excellence</h3>
+                            <p class="para1 mb-0">Rizzards University offers cutting-edge courses and research
+                                opportunities in a variety of fields. Our academic programs are designed to equip
+                                students with the knowledge and skills needed to excel in their careers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature_1li d-flex align-items-center mb-3">
+                        <div class="feature_1lil">
+                            <div class="icon-style">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="feature_1lir ms-3">
+                            <h3 class="ab">Student Support</h3>
+                            <p class="para1 mb-0">We provide personalized support to help students achieve their full
+                                potential. From academic advising to career services, Rizzards University is dedicated
+                                to guiding students every step of the way.</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature_1li d-flex align-items-center mb-3">
+                        <div class="feature_1lil">
+                            <div class="icon-style">
+                                <i class="fa-solid fa-chalkboard-teacher"></i>
+                            </div>
+                        </div>
+                        <div class="feature_1lir ms-3">
+                            <h3 class="ab">Expert Faculty</h3>
+                            <p class="para1 mb-0">Our faculty members are experts in their respective fields, offering a
+                                wealth of knowledge and experience to guide students through their academic journey and
+                                research endeavors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 px-0">
+                    <div class="feature_1r">
+                        <div class="grid clearfix">
+                            <figure class="effects">
+                                <a href="#"><img src="/images/index/img3.jpg" alt="University Campus"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+    
+    <script src="/script/chatbot.js"></script>
+</body>
+</html>

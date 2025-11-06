@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Review - Rizzards</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/review.css">
+</head>
+<body>
+    <%#- include('./partials/loader.ejs') %>
+    <%- include('./partials/header.ejs', {currentPage: 'review'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb">Review</h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a>&nbsp;Review</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container py-5">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/ourteam/person-icon.png" alt="Student 1">
+                        </div>
+                        <h5 class="fw-bold text-dark">Deepanshu</h5>
+                        <h6 class="fw-bold my-4">Student, Computer Science</h6>
+                        <ul class="mb-4 p-0 m-0 d-flex justify-content-center">
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                        </ul>
+                        <p>
+                            The Computer Science program at this university is exceptional. The professors are
+                            knowledgeable, and the resources available have given me the skills to succeed in the tech
+                            industry.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/ourteam/person-icon.png" alt="Student 2">
+                        </div>
+                        <h5 class="fw-bold text-dark">Gurleen</h5>
+                        <h6 class="fw-bold my-4">Student, Business Administration</h6>
+                        <ul class="mb-4 p-0 m-0 d-flex justify-content-center">
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star-half-alt fa-sm"></i></li>
+                        </ul>
+                        <p>
+                            This university has provided me with the business acumen to excel. The courses are
+                            well-structured and focus on real-world applications, preparing students for leadership
+                            roles.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="/images/ourteam/person-icon.png" alt="Student 3">
+                        </div>
+                        <h5 class="fw-bold text-dark">Ayush</h5>
+                        <h6 class="fw-bold my-4">Student, Mechanical Engineering</h6>
+                        <ul class="mb-4 p-0 m-0 d-flex justify-content-center">
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="fas fa-star fa-sm"></i></li>
+                            <li><i class="far fa-star fa-sm"></i></li>
+                        </ul>
+                        <p>
+                            The Mechanical Engineering program offers a perfect balance between theory and hands-on
+                            experience. The facilities are state-of-the-art, and the faculty is always available to
+                            help.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container1">
+        <h2>Customer Review Form</h2>
+        <p class="text-center">We would love to hear about your experience.</p>
+
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Profession</label>
+                <input type="text" class="form-control" id="profession" placeholder="Your Profession" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="example@domain.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Review">Your Review</label>
+                <textarea class="form-control" id="Review" rows="3" placeholder="Share your experience with us..."
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <p>Rate Your Experience</p>
+                <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" aria-label="5 stars">
+                    <label for="5-stars">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" aria-label="4 stars">
+                    <label for="4-stars">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" aria-label="3 stars">
+                    <label for="3-stars">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" aria-label="2 stars">
+                    <label for="2-stars">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" aria-label="1 star">
+                    <label for="1-star">&#9733;</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Would you recommend us?</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="recommend" id="recommendYes" value="yes" required>
+                    <label class="form-check-label" for="recommendYes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="recommend" id="recommendNo" value="no" required>
+                    <label class="form-check-label" for="recommendNo">No</label>
+                </div>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="consent" required>
+                <label class="form-check-label" for="consent">I consent to the use of my Review as outlined in the
+                    Review Page.</label>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <div id="message" class="text-center mt-3"></div>
+    </div>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+    
+    <script src="/script/review.js"></script>
+</body>
+</html>

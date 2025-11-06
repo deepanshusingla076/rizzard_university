@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course Details - Rizzards</title>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/course-details.css">
+</head>
+<body>
+    <%- include('./partials/header.ejs', {currentPage: 'course'}) %>
+    
+    <br><br><br>
+
+    <section id="center" class="box">
+        <div class="container-xl">
+            <div class="boxa">
+                <div class="col-md-12">
+                    <h1 class="boxb"><%= course.title %></h1>
+                    <h6 class="boxc"><a class="b" href="/dashboard">Home &nbsp;|</a><a class="b" href="/course">&nbsp;Courses &nbsp;|</a>&nbsp;<%= course.title %></h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-details-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="course-overview card mb-4">
+                        <div class="card-body">
+                            <h2 class="section-title">Course Overview</h2>
+                            <div class="course-image mb-4">
+                                <img src="<%= course.image %>" alt="<%= course.title %>" class="img-fluid rounded">
+                            </div>
+                            <p class="course-description mb-4"><%= course.description %></p>
+                        
+                            <div class="course-features mb-4">
+                                <h3>Key Features</h3>
+                                <ul class="features-list">
+                                    <% course.features.forEach(function(feature) { %>
+                                        <li><i class="fas fa-check-circle text-success me-2"></i> <%= feature %></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+
+                            <div class="course-benefits mb-4">
+                                <h3>Benefits</h3>
+                                <div class="row">
+                                    <% course.benefits.forEach(function(benefit, index) { %>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="benefit-card">
+                                                <i class="fas fa-award benefit-icon"></i>
+                                                <h5><%= benefit.title %></h5>
+                                                <p><%= benefit.description %></p>
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+
+                            <div class="learning-outcomes mb-4">
+                                <h3>Learning Outcomes</h3>
+                                <div class="row">
+                                    <% course.outcomes.forEach(function(outcome, index) { %>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="outcome-item">
+                                                <div class="outcome-number"><%= index + 1 %></div>
+                                                <div class="outcome-text"><%= outcome %></div>
+                                            </div>
+                                        </div>
+                                    <% }); %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="course-sidebar">
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                Course Details
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Duration:</span>
+                                        <strong><%= course.duration %></strong>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Start Date:</span>
+                                        <strong><%= course.startDate %></strong>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Fee:</span>
+                                        <strong class="text-primary">₹<%= course.fee.toLocaleString() %></strong>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Success Rate:</span>
+                                        <strong><%= course.successRate %>%</strong>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Seats Available:</span>
+                                        <strong><%= course.seatsAvailable %></strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-primary text-white">
+                                Requirements
+                            </div>
+                            <div class="card-body">
+                                <ul class="requirements-list">
+                                    <% course.requirements.forEach(function(requirement) { %>
+                                        <li><i class="fas fa-circle me-2"></i> <%= requirement %></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Form-->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Application Form</h3>
+                        </div>
+                        <div class="card-body">
+                            <% if (typeof success !== 'undefined' && success) { %>
+                                <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    <strong>Thank you for your application!</strong> We have received your submission and will contact you soon.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <% } %>
+                            <form id="course-application-form" action="/api/submit-course-application" method="POST">
+                                <input type="hidden" name="courseId" value="<%= course.id %>">
+                                <input type="hidden" name="courseTitle" value="<%= course.title %>">
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="qualification" class="form-label">Highest Qualification</label>
+                                        <select class="form-select" id="qualification" name="qualification" required>
+                                            <option value="" disabled selected>Select your qualification</option>
+                                            <option value="High School">High School</option>
+                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                            <option value="Master's Degree">Master's Degree</option>
+                                            <option value="Ph.D">Ph.D</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea class="form-control" id="address" name="address" rows="2" required></textarea>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="whyJoin" class="form-label">Why do you want to join this course?</label>
+                                    <textarea class="form-control" id="whyJoin" name="whyJoin" rows="3" required></textarea>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">Submit Application</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/chatbot.ejs') %>
+    <%- include('./partials/footer.ejs') %>
+
+    <script src="/script/course-details.js"></script>
+</body>
+</html>

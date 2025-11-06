@@ -1,0 +1,370 @@
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    color: #f1d60c;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #112f5c;
+    margin-bottom: 15px;
+}
+
+.section-divider {
+    width: 80px;
+    height: 3px;
+    background-color: #f1d60c;
+    margin: 0 auto 20px;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Featured Event */
+.featured-event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.featured-event-image {
+    position: relative;
+    height: 100%;
+}
+
+.featured-event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-event-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #f1d60c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-event-date .day {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.featured-event-date .month {
+    font-size: 16px;
+}
+
+.featured-event-content {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-badge {
+    display: inline-block;
+    background-color: #112f5c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.featured-event-content h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #112f5c;
+}
+
+.event-meta {
+    margin-bottom: 15px;
+}
+
+.event-meta span {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.event-meta span i {
+    color: #f1d60c;
+    margin-right: 5px;
+}
+
+.featured-event-actions {
+    margin-top: 20px;
+}
+
+.featured-event-actions .btn {
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+
+/* Event Cards */
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.event-card-img {
+    position: relative;
+    height: 200px;
+}
+
+.event-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-date {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #f1d60c;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-date .day {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 12px;
+}
+
+.event-card-body {
+    padding: 25px;
+}
+
+.event-type {
+    display: inline-block;
+    background-color: #e9f0ff;
+    color: #112f5c;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #112f5c;
+}
+
+.event-description {
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Past Events */
+.past-event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+}
+
+.past-event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.past-event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.past-event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.past-event-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 47, 92, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.past-event-card:hover .past-event-overlay {
+    opacity: 1;
+}
+
+.past-event-content {
+    text-align: center;
+}
+
+.past-event-content h5 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.past-event-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Newsletter Section */
+.opacity-8 {
+    opacity: 0.8;
+}
+
+.newsletter-form .input-group {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.newsletter-form .form-control {
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    height: auto;
+}
+
+.newsletter-form .btn {
+    padding: 15px 30px;
+    font-weight: 600;
+    color: #112f5c;
+    border: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .featured-event-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .featured-event-content {
+        padding: 20px;
+    }
+    
+    .featured-event-content h2 {
+        font-size: 24px;
+    }
+    
+    .featured-event-image {
+        height: 250px;
+    }
+    
+    .past-event-card {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-event-date,
+    .event-date {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .featured-event-date .day {
+        font-size: 24px;
+    }
+    
+    .featured-event-date .month {
+        font-size: 12px;
+    }
+    
+    .event-meta span {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+
